@@ -3,24 +3,33 @@
 <title>Kosha Prompts – Privacy Policy</title>
 <style>body{font:16px/1.6 system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;color:#17171c}h1{font-size:26px}h2{font-size:18px;margin-top:28px}@media(prefers-color-scheme:dark){body{background:#111114;color:#ececf1}a{color:#a5a6fb}}</style>
 </head><body>
+
 <h1>Kosha Prompts – Privacy Policy</h1>
-<p><em>DRAFT · Last updated: 31 October 2026</em></p>
+<p><em>Last updated: 11 November 2026</em></p>
 <p>Kosha Prompts is a browser extension that keeps a library of your prompts and inserts them into the message box on supported AI chat websites (ChatGPT, Claude and Gemini).</p>
-<h2>What we collect</h2>
-<p>Nothing. We do not collect, receive, sell or share any personal data. There is no account, no server, no analytics and no tracking.</p>
+<h2>Summary</h2>
+<p>Your prompts, folders and chat-folder entries never leave your browser, except that Pro users' prompt library may be copied to their own Chrome sync storage. The extension contacts one outside service, and only if you use the optional Pro license: Gumroad.</p>
+<p>We do not sell, rent or share your data. No analytics, no ads, no tracking.</p>
 <h2>What is stored, and where</h2>
 <ul>
 <li>Your prompts, folders, chat-folder entries and settings are saved in your browser using Chrome's extension storage.</li>
-<li>If your prompt library is small enough (under Chrome's 8 KB per-item sync limit), a copy is also kept in Chrome's sync storage. If you have turned on Chrome sync, Google syncs it between your own signed-in browsers under Google's privacy policy. Larger libraries stay only on this device.</li>
-<li>You can export or import your data as a file at any time. Uninstalling the extension deletes its stored data.</li>
+<li>For Pro users, when the prompt library is under Chrome's 8 KB per-item sync limit, a copy is kept in <code>chrome.storage.sync</code> under your own signed-in Chrome account. Small display settings (theme and whether onboarding is done) are kept in sync storage for all users.</li>
+<li>If you activate Pro, the extension stores in <code>chrome.storage.local</code> on this device: your license key, its status (Pro, invalid, refunded or none), and the times of the last check and last successful check. This is never written to Chrome sync storage and never sent anywhere except Gumroad as described below. "Remove key" in Plan &amp; license deletes the key from this browser. If Gumroad can't be reached, Pro keeps working for up to 7 days from the last successful check.</li>
+<li>You can import your data from a file at any time (export is a Pro feature). Uninstalling the extension deletes its stored data.</li>
 </ul>
+<h2>Optional Pro license and Gumroad</h2>
+<p>Kosha Prompts is free to use. An optional Pro upgrade is sold by Gumroad, Inc. Payment happens entirely on Gumroad's website; the extension never sees or stores your card or payment details.</p>
+<p>When you paste a Pro license key in <b>Plan &amp; license</b> and choose to activate it, and then at most once every 24 hours, the extension sends a request to Gumroad's license API (<code>https://api.gumroad.com/v2/licenses/verify</code>) containing only:</p>
+<ul><li>your license key,</li><li>the Kosha Prompts product ID, and</li><li>a flag telling Gumroad not to count this as a new activation.</li></ul>
+<p>The request is sent without cookies or referrer. It contains none of your prompts, chats or browsing data. Gumroad replies with the status of that purchase; the extension uses only whether it is valid, refunded, disputed or an ended subscription, and discards the rest of the reply.</p>
+<p>Gumroad processes your purchase and this check as an independent company under its own privacy policy: <a href="https://gumroad.com/privacy">https://gumroad.com/privacy</a></p>
 <h2>Website access</h2>
-<p>The extension runs only on chatgpt.com, chat.openai.com, claude.ai and gemini.google.com. There it finds the message box to insert a prompt you choose, and reads the titles and links in the site's chat list so you can file chats into your own folders. It does not read your conversations and sends nothing anywhere.</p>
-<h2>Network</h2>
-<p>The extension makes no network requests of its own. It loads no remote code. It does not accept messages from other extensions or websites.</p>
+<p>The extension runs only on chatgpt.com, chat.openai.com, claude.ai and gemini.google.com. There it finds the message box to insert a prompt you choose, and reads the titles and links in the site's chat list so you can file chats into your own folders. It does not read your conversations and sends nothing from those sites anywhere.</p>
+<h2>Code and messaging</h2>
+<p>The extension loads no remote code. It does not accept messages from other extensions or websites.</p>
 <h2>Permissions</h2>
-<ul><li><b>storage</b>: to save your prompts and settings.</li><li><b>Access to the four sites above</b>: to insert prompts and show the sidebar there.</li></ul>
-<h2>Children</h2><p>The extension is not directed at children and collects no data from anyone.</p>
+<ul><li><b>storage</b>: to save your prompts and settings.</li><li><b>Access to the four sites above</b>: to insert prompts and show the sidebar there.</li><li><b>Access to api.gumroad.com</b>: only for the optional Pro license check above.</li></ul>
+<h2>Children</h2><p>Kosha Prompts is not directed at children under 13.</p>
 <h2>Changes</h2><p>If this policy changes, the new version will be posted at this address with a new date.</p>
 <h2>Contact</h2><p>densa850@gmail.com</p>
 </body></html>
